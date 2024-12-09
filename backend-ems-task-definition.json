@@ -1,0 +1,89 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:888577032060:task-definition/backend_ems_task:25",
+  "containerDefinitions": [
+    {
+      "name": "backend_ems",
+      "image": "888577032060.dkr.ecr.ap-south-1.amazonaws.com/backend_ems:latest",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "name": "backend_ems-3000-tcp",
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/backend_ems_task",
+          "mode": "non-blocking",
+          "awslogs-create-group": "true",
+          "max-buffer-size": "25m",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "family": "backend_ems_task",
+  "taskRoleArn": "arn:aws:iam::888577032060:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::888577032060:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 25,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": ["EC2", "FARGATE"],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "registeredAt": "2024-12-02T05:12:55.134Z",
+  "registeredBy": "arn:aws:iam::888577032060:user/vionsys_ems",
+  "tags": []
+}
