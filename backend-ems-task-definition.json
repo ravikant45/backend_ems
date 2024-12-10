@@ -1,15 +1,15 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:888577032060:task-definition/backend_ems_task:25",
+  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:463470964776:task-definition/backend_ems_task:1",
   "containerDefinitions": [
     {
       "name": "backend_ems",
-      "image": "888577032060.dkr.ecr.ap-south-1.amazonaws.com/backend_ems:latest",
+      "image": "463470964776.dkr.ecr.ap-south-1.amazonaws.com/backend_ems:latest",
       "cpu": 0,
       "portMappings": [
         {
-          "name": "backend_ems-3000-tcp",
-          "containerPort": 3000,
-          "hostPort": 3000,
+          "name": "backend_ems-80-tcp",
+          "containerPort": 80,
+          "hostPort": 80,
           "protocol": "tcp",
           "appProtocol": "http"
         }
@@ -36,10 +36,9 @@
     }
   ],
   "family": "backend_ems_task",
-  "taskRoleArn": "arn:aws:iam::888577032060:role/ecsTaskExecutionRole",
-  "executionRoleArn": "arn:aws:iam::888577032060:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::463470964776:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 25,
+  "revision": 1,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -57,9 +56,6 @@
     },
     {
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
     },
     {
       "name": "ecs.capability.execution-role-ecr-pull"
@@ -83,7 +79,8 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2024-12-02T05:12:55.134Z",
-  "registeredBy": "arn:aws:iam::888577032060:user/vionsys_ems",
+  "registeredAt": "2024-12-10T06:19:57.995Z",
+  "registeredBy": "arn:aws:iam::463470964776:root",
+  "enableFaultInjection": false,
   "tags": []
 }
