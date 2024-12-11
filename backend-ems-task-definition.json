@@ -2,7 +2,7 @@
   "containerDefinitions": [
     {
       "name": "backend_ems",
-      "image": "463470964776.dkr.ecr.ap-south-1.amazonaws.com/backend_ems:latest",
+      "image": "463470964776.dkr.ecr.ap-south-1.amazonaws.com/backend_ems",
       "cpu": 0,
       "portMappings": [
         {
